@@ -1,27 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <h1> hi </h1>
+  
+    <v-toolbar height="100" dark>
+      <v-spacer></v-spacer>
+      <h1 class="text">TODO LISTs</h1>
+      <v-spacer></v-spacer>
+    </v-toolbar>
+ 
+  <add-input></add-input>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AddInput from "./components/AddInput.vue";
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    AddInput,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(rgb(191, 0, 255), pink, whiteSmoke);
+}
+
+
+
+.text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 </style>
